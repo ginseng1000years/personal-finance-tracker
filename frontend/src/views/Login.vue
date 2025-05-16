@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     loginWithGoogle() {
-      window.location.href = `http://localhost:8081/oauth2/authorization/google`;
+      window.location.href = `${API_BASE_URL}/oauth2/authorization/google`;
     },
     async handleOAuthCallback() {
       const urlParams = new URLSearchParams(window.location.search);
