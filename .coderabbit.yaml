@@ -8,6 +8,7 @@ branches:
   include:
     - main
     - develop
+    - feature/*
 
 # Configure which files should be reviewed
 files:
