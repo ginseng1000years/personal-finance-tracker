@@ -34,7 +34,7 @@ public class SecurityConfig {
             .and()
                 .oauth2Login()
                     .loginPage("/login")
-                    .defaultSuccessUrl("http://localhost:8080/transactions", true)
+                    .defaultSuccessUrl("${spring.security.login.success-url}", true)
                     .userInfoEndpoint()
                     .userService(customOAuth2UserService)
             .and()

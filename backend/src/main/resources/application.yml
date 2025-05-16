@@ -13,6 +13,8 @@ spring:
               - email
               - profile
     debug: true
+    login:
+      success-url: http://localhost:8080/transactions
   data:
     mongodb:
       uri: mongodb://localhost:27017/money-management
