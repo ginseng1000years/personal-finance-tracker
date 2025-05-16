@@ -40,13 +40,7 @@ public class SecurityConfig {
             .and()
                 .rememberMe()
                     .key("uniqueAndSecret")
-                    .tokenValiditySeconds(86400)
-            .and()
-                .oauth2Login()
-                    .loginPage("/login")
-                    .defaultSuccessUrl("http://localhost:8080/transactions", true)
-                    .userInfoEndpoint()
-                    .userService(customOAuth2UserService);
+                    .tokenValiditySeconds(86400);
         
         return http.build();
     }
