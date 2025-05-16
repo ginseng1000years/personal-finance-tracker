@@ -1,7 +1,25 @@
 server:
-  port: 8082
+  port: 8081
 
 spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE-CLIENT-ID}
+            client-secret: ${GOOGLE-CLIENT-SECRET}
+            scope:
+              - email
+              - profile
+    debug: true
+    login:
+      success-url: http://localhost:8080/transactions
   data:
     mongodb:
       uri: mongodb://localhost:27017/money-management
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
